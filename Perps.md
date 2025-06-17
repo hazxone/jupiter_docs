@@ -1,0 +1,381 @@
+# Jupiter Perps & JLP Documentation
+
+## I. Introduction to Jupiter Perps & JLP
+
+- **Welcome to Jupiter Perps**
+Welcome to Jupiter Perps, a perpetual exchange where you can trade top tokens like **SOL**, **ETH**, or **wBTC** with leverage. Whether you're looking to go **long** (betting the price will rise) or **short** (betting the price will fall), Jupiter Perps offers a fast, exciting, and feature-packed trading experience. The platform is designed as a trader-to-LP exchange, meaning liquidity providers (LPs) supply assets to a pool, and traders borrow from that pool to open leveraged positions.
+
+- **Overview of the Jupiter Liquidity Provider (JLP) Pool**
+The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for Jupiter Perps. It acts as the direct counterparty to all trades on the exchange. The pool holds a basket of assets (**SOL**, **ETH**, **wBTC**, **USDC**, and **USDT**) and provides the necessary liquidity for traders to open highly-leveraged positions. In return for providing liquidity, LPs earn a share of the trading fees generated on the platform.
+
+- **Key Features for Traders**
+    - **Liquidity and Leverage:** The JLP Pool provides deep liquidity, allowing traders to open positions with up to **100x** leverage on **SOL** and up to **150x** on **ETH** and **wBTC**.
+    - **Collateral:** Traders can use any supported SPL token as collateral. Jupiter automatically swaps the deposited token into the required underlying collateral for the position.
+    - **Price Oracles:** The exchange uses a robust multi-oracle system for pricing, which means traders can execute large trades without the price impact typically seen on traditional order book exchanges. However, a **price impact fee** is applied to simulate this effect.
+    - **Risk and Economic Management:** Jupiter works with economic and risk management teams like Chaos Labs and Gauntlet to ensure a stable, fair, and competitive trading environment.
+    - **Limit Orders:** Traders can place limit orders to enter long or short positions at a specific target price, offering greater control over trade execution.
+    - **Gasless Orders:** A keeper execution model allows traders to submit orders without paying for transaction fees directly. Keepers execute the order on behalf of the trader.
+
+- **Key Features for Liquidity Providers**
+    - **Rewards and Earnings:** LPs earn a significant portion of the platform's trading fees, which are reinvested into the pool. The value of their holdings also changes based on traders' collective profits and losses.
+    - **Composability:** The **JLP token**, which represents a share in the pool, is a standard SPL token. This makes it easily transferable, tradable, and usable within the broader Solana DeFi ecosystem.
+    - **No Active Management:** Yields are automatically compounded into the JLP token's value. LPs do not need to actively stake tokens or harvest rewards; the earnings are reflected as an increase in the JLP token price over time.
+
+---
+
+## II. Trading on Jupiter Perps
+
+### Perps Quickstart: Opening a Position
+
+1.  **Connect Your Wallet**  
+    Navigate to the Jupiter Perps page and click "Connect Wallet" to connect your preferred Solana wallet, like Phantom or Solflare.
+
+2.  **Select the Market**  
+    Use the Perp Market Selector to choose the token you want to trade: **SOL**, **ETH**, or **wBTC**.
+
+3.  **Choose Long or Short**  
+    Use the Long/Short Selector to decide your position. **Long** if you expect the price to rise, **Short** if you expect it to fall.
+
+4.  **Set Your Collateral**  
+    In the Input Token Selector, choose the token and amount you wish to use as collateral for your trade.
+
+5.  **Adjust Leverage**  
+    Use the Leverage Slider to set your desired leverage, ranging from **1.1x** up to **100x** or **150x**.
+
+6.  **Review Price Stats**  
+    Check the Price Stats section for real-time data like current index price and 24-hour price movements to inform your decision.
+
+7.  **Review Order Summary**  
+    Examine the Order Summary for key details of your trade, including position size, leverage, entry price, and estimated liquidation price.
+
+8.  **Submit Your Order**  
+    Click the "Open Long" or "Open Short" button and approve the transaction in your wallet.
+
+9.  **Monitor and Manage Your Position**  
+    Go to the Positions Tab to track your real-time Profit and Loss (PnL), add or withdraw collateral, or make other adjustments.
+
+10. **Closing Your Position**  
+    When ready, go to the Positions Tab, select the position you wish to exit, and choose to close it partially or fully. Confirm the closure in your wallet.
+
+### Understanding Leverage
+
+- **What is Leverage?**  
+  Leverage allows you to trade larger positions than your initial capital would normally allow by borrowing funds from the JLP pool. It amplifies the potential for both profits and losses.
+
+- **How Leverage Works**  
+  When you open a leveraged position, you borrow capital to control a larger trade size. For example, with **100x leverage**, a $100 collateral deposit allows you to control a $10,000 position. This magnifies the effect of price movements on your investment.
+
+- **Leverage Limits**  
+  Jupiter Perps offers leverage up to **100x** for **SOL** and up to **150x** for **ETH** and **wBTC**. The maximum allowable leverage on the platform is **500x**, though positions are liquidated if collateral falls below 0.2% of the position size.
+
+- **Margin and Maintenance Margin**  
+  - **Initial Margin:** This is the collateral you deposit to open a position.
+  - **Maintenance Margin:** This is the minimum amount of collateral required to keep your position open. If your collateral drops below this level due to losses, you may face liquidation.
+
+- **Risks of Using Leverage**  
+  The primary risk of leverage is amplified losses. A small price movement against your position can lead to a rapid loss of your collateral and automatic closure of your position (liquidation).
+
+- **Best Practices for Using Leverage**  
+  - **Start small:** Begin with lower leverage to gain experience.
+  - **Use stop-loss orders:** Set stop-loss orders to automatically close your position at a predetermined price to limit potential losses.
+  - **Monitor your position:** Keep a close watch on your PnL and collateral level to avoid unexpected liquidation.
+
+### Collateral Management
+
+- **General Principles of Collateral**  
+  Traders can deposit any SPL token supported by Jupiter Swap as initial margin. The platform automatically converts it to the required collateral token for the position. The USD value of the collateral is fixed at the time of deposit and does not fluctuate with the collateral token's price. Traders can deposit additional collateral to decrease leverage and the risk of liquidation, or withdraw collateral, which increases leverage and risk.
+
+- **Collateral for Long Positions**  
+  - **Underlying Collateral:** The collateral for long positions is the token being traded.
+    - Long SOL: **SOL** collateral
+    - Long ETH: **ETH** collateral
+    - Long wBTC: **wBTC** collateral
+  - **Depositing Collateral:** Decreases the liquidation price and leverage.
+  - **Withdrawing Collateral:** Increases the liquidation price and leverage.
+  - **Payouts:** Profits and collateral withdrawals are paid out in the token that was longed (e.g., SOL for a SOL-Long), though traders have the option to receive USDC.
+
+- **Collateral for Short Positions**  
+  - **Underlying Collateral:** The collateral for short positions is a stablecoin.
+    - Short SOL/ETH/wBTC: **USDC** or **USDT** collateral
+  - **Depositing Collateral:** Increases the liquidation price and decreases leverage.
+  - **Withdrawing Collateral:** Decreases the liquidation price and increases leverage.
+  - **Payouts:** Profits and collateral withdrawals are paid out in the stablecoin used for collateral (e.g., USDC), though traders have the option to receive the underlying token (e.g., SOL).
+
+### Fees on Jupiter Perps
+
+- **Base Fees (Open/Close)**  
+  A flat fee of **0.06%** of the position size is charged for both opening and closing a position, including partial closes.
+
+- **Price Impact Fees**  
+  To simulate the effect of trade size on price in a traditional order book, Jupiter Perps implements a price impact fee. This fee is proportional to the trade size and helps compensate the JLP for the risk of large trades, ensuring a fair environment for both traders and liquidity providers.
+
+- **Borrow Fees (Hourly Calculation)**  
+  Traders pay an hourly borrow fee for the funds borrowed from the JLP pool to create a leveraged position. The fee is calculated based on the pool's utilization rate for that asset.
+  
+  **Hourly Borrow Fee** = (Total Tokens Locked / Tokens in Pool) × Hourly Borrow Rate × Position Size
+  
+  These fees are continuously deducted from your collateral, which can affect your leverage and liquidation price over time.
+
+- **Transaction and Priority Fees**  
+  Traders must pay standard Solana network transaction fees. Priority fees or Jito bundle tips may also be paid depending on user settings to facilitate faster execution. A small amount of SOL is also used for rent to create a temporary escrow account, which is returned when the position is closed.
+
+### Calculating Profit & Loss (PnL)
+
+- **What is PnL?**  
+  **PnL** stands for **Profit and Loss**. It is a real-time metric that shows how much money you have gained or lost on an open position.
+
+- **How PnL Works (Long vs. Short)**  
+  - **Long Positions:** Your PnL is positive when the asset's price rises above your entry price and negative when it falls below.
+  - **Short Positions:** Your PnL is positive when the asset's price falls below your entry price and negative when it rises above.
+
+- **Understanding PnL Calls**  
+  If your PnL becomes significantly negative and your collateral margin falls below the required maintenance level, you may receive a call to deposit more collateral to avoid liquidation.
+
+- **Formulas for Realized and Unrealized PnL**  
+  The calculation for PnL involves comparing the exit price to the average entry price of the position.
+  1.  `priceDelta = |exitPrice - positionAvgPrice|`
+  2.  `pnlDelta = (tradeSizeUsd * priceDelta) / positionAvgPrice`
+  
+  If the trade is profitable, this `pnlDelta` is your **unrealized PnL**. If it's a loss, the unrealized PnL is negative.
+  
+  **Realized PnL** is calculated after a position is closed, by subtracting all fees (open/close base fee, price impact fee, borrow fees) from the unrealized PnL.
+  `realizedPnl = unrealizedPnl - totalFees`
+
+### Liquidation Explained
+
+- **Understanding Liquidation Price**  
+  The liquidation price is the price at which a leveraged position is automatically closed by the system because the trader's collateral is no longer sufficient to cover potential losses.
+  - For **long positions**, liquidation occurs when the token price *falls to or below* the liquidation price.
+  - For **short positions**, liquidation occurs when the token price *rises to or above* the liquidation price.
+
+- **Formulas for Liquidation Price (Long & Short)**
+    - **For long positions:**
+    `liquidation_price = price - ((collateral_size - close_fee - borrow_fee) / size)`
+    - **For short positions:**
+    `liquidation_price = price + ((collateral_size - close_fee - borrow_fee) / size)`
+
+    Where:
+    - `price`: Average entry price of the position (USD)
+    - `collateral_size`: Collateral size (USD)
+    - `close_fee`: Estimated fee to close the position (USD)
+    - `borrow_fee`: Accumulated borrow fees (USD)
+    - `size`: The size of the position (USD)
+
+- **Factors Affecting Liquidation Price**  
+  The liquidation price is not static. It changes over time, primarily due to the continuous accumulation of **borrow fees**, which are deducted from your collateral. This is especially noticeable for positions with high leverage or those held for long durations.
+
+### Price Oracles and Data
+
+- **How Token Prices are Determined**  
+  Token prices on Jupiter Perps for **SOL, ETH, wBTC, USDC,** and **USDT** are determined by on-chain price oracles. These oracle prices are used as the mark price for all critical functions, including opening/closing positions, calculating PnL, determining liquidation prices, and triggering limit orders. Traders should use the Jupiter Perps price chart as the single source of truth for their decisions.
+
+- **Multi-Oracle System (Edge, Chainlink, Pyth)**  
+  Jupiter employs a multi-oracle system to ensure price accuracy and reliability.
+  - **Primary Oracle:** **Edge by Chaos Labs** is the main price source.
+  - **Backup Oracles:** **Chainlink** and **Pyth** are used to verify the Edge oracle's price and act as backups.
+  
+  The system works as follows:
+  1. If the Edge price is fresh and within a set threshold of both Chainlink and Pyth, the Edge price is used.
+  2. If Edge is stale or its price deviates too much, the system compares Chainlink and Pyth. If they are close, the latest price between the two is used.
+  3. If two of the three oracles fail, price updates are paused.
+
+- **Oracle Price Accounts**  
+  The oracle price data is stored in the following on-chain accounts:
+  - **SOL:** `FYq2BWQ1V5P1WFBqr3qB2Kb5yHVvSv7upzKodgQE5zXh`
+  - **ETH:** `AFZnHPzy4mvVCffrVwhewHbFc93uTHvDSFrVH7GtfXF1`
+  - **BTC:** `hUqAT1KQ7eW1i6Csp9CXYtpPfSAvi835V7wKi5fRfmC`
+  - **USDC:** `6Jp2xZUTWdDD2ZyUPRzeMdc6AFQ5K3pFgZxk2EijfjnM`
+  - **USDT:** `Fgc93D641F8N2d1xLjQ4jmShuD3GE3BsCXA56KBQbF5u`
+
+### Order Fulfillment Model
+
+- **How Jupiter Creates Trade Requests**  
+  When a trader initiates an action (e.g., opening a position, depositing collateral), the Jupiter frontend or API server submits a transaction to the Solana blockchain. This transaction creates a trade request containing all the necessary data to fulfill it, such as trade size, collateral, and position side.
+
+- **How Keepers Execute Trade Requests**  
+  **Keepers** are off-chain services that continuously monitor the Solana blockchain for new trade requests. When a keeper detects a request, it verifies the details and submits a second transaction to execute the trade. The trade is officially completed only after this second transaction is confirmed on the blockchain. This two-transaction model ensures that every trade request is processed efficiently and automatically.
+
+### Using Limit Orders
+
+- **How Limit Orders Function**  
+  A limit order allows you to set a specific price at which you want to open a position, rather than opening it at the current market price. The order remains active until it is triggered at your specified price or manually canceled. If triggered, it will either open a new position or be combined with an existing position in the same market.
+
+- **General Notes on Limit Orders**  
+  - Limit orders operate independently of existing positions.
+  - They remain active even if an existing position is closed or liquidated.
+  - Up to 20 limit orders can be placed on the same pair and side.
+
+- **Important Considerations (Near Liquidation, Simulated Price)**  
+  - **Near Liquidation Price:** Placing a limit order near your liquidation price does not guarantee it will save your position. Execution depends on which transaction (the limit order or the liquidation) is processed first by the network.
+  - **Simulated Price:** The liquidation price shown on the limit order form is a simulation based on current conditions. The actual liquidation price of the position, if opened, will depend on market conditions at the time of execution.
+
+- **Limitations on Limit Orders**  
+  New limit orders cannot be created for a market if its pool utilization is above 80%.
+
+### Example of a Perp Trade
+
+- **Scenario Setup**  
+  A trader opens a 2x long position on SOL.
+  - **Position size**: $1,000
+  - **Collateral**: $500 worth of SOL
+  - **Borrowed amount**: $500 from the JLP pool
+  - **Initial SOL price**: $100
+  - **Opening fee**: 0.06% * $1,000 = **$0.60**
+  
+  The trader holds the position for **2 days (48 hours)**, and the price of SOL rises 10% to $110.
+  - **Final position value**: $1,100
+  - **Closing fee**: 0.06% * $1,100 = **$0.66**
+
+- **Calculating Borrow Fees**  
+  Assuming an hourly borrow rate calculation results in a fee of **$0.60 per hour**.
+  - **Total borrow fee** for 48 hours = $0.60 * 48 = **$28.80**
+  
+  *(Note: The example in the source material contains a calculation error. $0.6 * 48 = $28.80, not $2.88. The following calculation uses the corrected value.)*
+
+- **Determining Final Profit**  
+  The trader's profit is the change in position value minus all fees.
+  - **Gross Profit**: $1,100 (final value) - $1,000 (initial value) = $100
+  - **Total Fees**: $0.60 (opening) + $0.66 (closing) + $28.80 (borrow) = $30.06
+  
+  **Final Net Profit** = $100 - $30.06 = **$69.94**
+
+---
+
+## III. Understanding Jupiter Liquidity Provider (JLP)
+
+### What is JLP? (Detailed)
+
+The **Jupiter Liquidity Provider (JLP)** Pool is a multi-asset liquidity pool that serves as the counterparty for traders on Jupiter Perps. When traders borrow assets to open leveraged positions, they are borrowing directly from this pool. The JLP token represents a share in the pool.
+
+- **Value Derivations of JLP**  
+  The value of the JLP token is derived from a combination of factors:
+  - An index of the underlying assets held in the pool: **SOL, ETH, wBTC, USDC, USDT**.
+  - The collective **profit and loss** of traders on the platform. When traders profit, the pool's value decreases; when they lose, the pool's value increases.
+  - **75%** of all fees generated from opening/closing positions, price impact, borrowing, and token swaps within the pool.
+
+### JLP Economics
+
+- **The JLP Token**  
+  The JLP token is minted to users who provide liquidity to the JLP pool. It can be acquired either by swapping for it on Jupiter Swap or by minting it directly via the Earn page.
+
+- **Managed Custodies (Tokens in Pool)**  
+  The JLP pool manages custodies for the following tokens:
+  - **SOL**
+  - **ETH**
+  - **BTC**
+  - **USDC**
+  - **USDT**
+
+- **Assets Under Management (AUM) Calculation**  
+  The total AUM of the JLP pool is the sum of the AUM of each individual token custody. The calculation differs for stablecoins and non-stablecoins.
+
+  - **Stablecoins AUM**  
+    For USDC and USDT, the calculation is straightforward:
+    `aum = owned_tokens * current_price`
+
+  - **Non-Stablecoins AUM (Unrealized PnL, NAV, Guaranteed USD)**  
+    For SOL, ETH, and wBTC, the calculation accounts for trader positions:
+    1.  **Net Asset Value (NAV)** is calculated based on available tokens and a `guaranteed_usd` value, which estimates the net obligation to long positions.
+    2.  The pool's AUM is then adjusted based on the **unrealized PnL** of short positions. If short traders are losing, their losses are added to the pool's AUM. If they are profiting, their profits are subtracted from the pool's AUM.
+
+  - **Total AUM**  
+    `total_aum = Σ(aum_of_each_custody)`
+
+- **Virtual Price, Market Price, and AUM Limit**  
+  - **Virtual Price:** This is the intrinsic value of JLP, calculated as: `Virtual Price = Total AUM (in USD) / Total JLP tokens in circulation`.
+  - **Market Price:** When the pool's AUM cap is not hit, users can mint/burn JLP at the Virtual Price. If the cap is hit, minting is disabled, and the JLP token may trade at a premium on the open market. This becomes the Market Price.
+
+- **Fetching AUM and Calculating JLP Virtual Price (Technical Snippets)**  
+  Technical examples showing how to fetch pool AUM and calculate the JLP virtual price in real-time are available in the Jupiter Perps GitHub repository.
+  - [Fetch pool AUM](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-pool-aum.ts)
+  - [Calculate JLP virtual price](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-jlp-virtual-price.ts)
+
+- **Calculating Global Unrealized PnL for Longs (Technical Snippets)**  
+  An estimate can be calculated using on-chain data from custody accounts. A simplified formula is:
+  `globalUnrealizedLongPnl = (custody.assets.locked * currentTokenPriceUsd) - custody.assets.guaranteedUsd`
+
+- **Calculating Global Unrealized PnL for Shorts (Technical Snippets)**  
+  An estimate for global short PnL can be calculated using data stored in the custody accounts:
+  `globalUnrealizedShortPnl = (custody.assets.globalShortSizes * (|custody.assets.globalShortAveragePrices - currentTokenPriceUsd|)) / custody.assets.globalShortAveragePrices)`
+
+- **Yield Generation and Reinvestment**  
+  The JLP token is a growth-focused asset. **75%** of all fees generated on Jupiter Perps are reinvested directly into the JLP pool, increasing its AUM. This causes the JLP token's virtual price to appreciate over time, automatically compounding returns for holders without requiring them to claim or stake rewards. The remaining 25% of fees go to Jupiter as protocol fees.
+
+- **Exposure for JLP Holders (Market Movements, Trader PnL)**  
+  - **Market Movements:** JLP holders are exposed to the price fluctuations of the underlying assets in the pool, especially **SOL, ETH,** and **BTC**. If these assets fall in price, the value of JLP will likely decrease.
+  - **Trader PnL:** JLP acts as the counterparty to traders. When traders lose money, the JLP pool profits. When traders are profitable, the JLP pool pays out those profits. JLP tends to outperform its underlying assets in sideways or bearish markets but may underperform in strong bull markets when long positions are highly profitable.
+
+### Becoming a JLP Liquidity Provider
+
+- **Method 1: Jupiter Swap**  
+  1.  Go to the [USDC-JLP](https://jup.ag/swap/USDC-JLP) pair on Jupiter Swap.
+  2.  Connect your wallet.
+  3.  Select the token you wish to sell and the amount.
+  4.  Confirm that JLP is the token you are buying.
+  5.  Click `Swap` and approve the transaction.
+
+- **Method 2: JLP Earn Page**  
+  1.  Go to the [JLP Earn page](https://jup.ag/perps-earn).
+  2.  Select the "Buy" tab in the interface.
+  3.  Choose the token and amount you wish to use to buy into the pool.
+  4.  Review the estimated JLP quantity and fees.
+  5.  Confirm the transaction in your wallet.
+
+### Risks Associated with JLP
+
+- **Market Volatility**  
+  The value of JLP is directly tied to the prices of its underlying assets (SOL, ETH, BTC, etc.). A significant downturn in the crypto market will negatively impact the JLP price.
+
+- **Counterparty Risk (Smart Contract Vulnerabilities)**  
+  As with any DeFi protocol, there is a risk of smart contract bugs or vulnerabilities that could lead to a loss of funds in the pool. Jupiter works with auditing firms to mitigate this risk.
+
+- **Opportunity Cost**  
+  The capital used to acquire JLP could potentially generate higher returns elsewhere. For example, during strong bull markets, simply holding the underlying assets might be more profitable than holding JLP.
+
+- **Impact of Trader Profitability**  
+  Since the JLP pool is the counterparty to all trades, it loses value when traders are collectively profitable. In market conditions that are easy to predict, skilled traders may profit at the expense of JLP holders.
+
+- **Low Utilization/Activity**  
+  A significant portion of JLP yield comes from trading fees. If trading volume on Jupiter Perps is low, the returns for JLP holders will also be lower.
+
+---
+
+## IV. Frequently Asked Questions (FAQ)
+
+### General Trading Queries
+
+- **How many positions can be opened on Jupiter Perps at one time?**  
+  Traders can open up to 9 positions at one time: a long and short position for each of the three main assets (SOL, wETH, wBTC), with short positions allowing for collateral in either USDC or USDT.
+
+- **What happens when you exceed leverage limits? (Auto closing)**  
+  The maximum allowable leverage on the platform is **500x**. However, positions are automatically liquidated (closed) if the trader's collateral, after accounting for fees and PnL, falls below **0.2%** of the total position size.
+
+### Position & Collateral Queries
+
+- **Why are my collateral sizes fixed (on Jupiter Perps)?**  
+  When you deposit collateral, the exchange records its value in USD at that moment. This USD value remains constant for the purpose of calculating leverage and margin for your position, regardless of how the price of the collateral token itself fluctuates. For example, if you deposit $100 worth of SOL, your collateral for that position is always considered to be $100.
+
+- **Why do long and short positions use different collateral tokens (on Jupiter Perps)?**  
+  Long positions use the asset being traded as collateral (e.g., SOL for a SOL-Long), while short positions use stablecoins (USDC/USDT). This design protects the JLP pool from risk scenarios, such as a long series of profitable trades that could deplete the pool's reserves of a specific asset. The platform automatically swaps any deposited SPL token into the correct underlying collateral for your chosen position.
+
+- **I have an existing SOL-Long position. I added 1 SOL to open a new SOL-Long position but I don’t see my new position. Why?**  
+  You can only have one position per market and side (e.g., one SOL-Long position). When you open a new position for a market where you already have one, the two are combined. The size and leverage are recalculated based on the merged position. Your previously set Take Profit/Stop Loss orders will remain unchanged.
+
+### Funds & Transaction Queries
+
+- **I tried opening a position/adding collateral and it was not successful. Where are my funds?**  
+  If a transaction to open a position or add collateral fails, your funds are typically returned to your wallet within 1-2 minutes. During network congestion, this may take longer. You can check for expired orders in the `Expired Orders` tab. To track the funds, find the transaction on a block explorer and look at the `Token Balance Change` or `SOL Balance Change` tab for the return transaction.
+
+- **I closed my position with profit but I have not received my funds.**  
+  Check your wallet for the correct asset. For profitable **long** positions, you receive the underlying asset (e.g., SOL for a SOL-Long). For profitable **short** positions, you receive the stablecoin used as collateral (USDC or USDT). You can verify the payout by checking the transaction history in your wallet or on a block explorer.
+
+- **I deposited 1 SOL for a leveraged position and profited, but why did I get less than the full amount?**  
+  Your final profit is the gross profit minus all associated fees. The amount you receive when you close a profitable position has already had the **opening fee**, **closing fee**, and any accrued **hourly borrow fees** deducted. These fees reduce the gross PnL, resulting in a lower net payout.
+
+### Price & Liquidation Queries
+
+- **How are the underlying token prices on Jupiter Perps determined?**  
+  Token prices are determined by an on-chain multi-oracle system that aggregates data from **Edge by Chaos Labs**, **Chainlink**, and **Pyth**. These oracle prices are used as the definitive mark price for all platform functions, including opening/closing trades, PnL calculation, and liquidations. Traders should rely on the Jupiter Perps price chart as the source of truth.
+
+- **Why is my liquidation price changing (on Jupiter Perps)?**  
+  Your liquidation price changes over time primarily because of the **hourly borrow fee**. This fee is continuously deducted from your collateral, which gradually erodes your margin and moves your liquidation price closer to the current market price. This effect is more pronounced on highly leveraged positions or positions held for extended periods.
