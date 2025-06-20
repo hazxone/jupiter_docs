@@ -1,11 +1,11 @@
 # Jupiter Perps & JLP Documentation
 
-## I. Introduction to Jupiter Perps & JLP
+# I. Introduction to Jupiter Perps & JLP
 
-- **Welcome to Jupiter Perps**
+## Welcome to Jupiter Perps
 Welcome to Jupiter Perps, a perpetual exchange where you can trade top tokens like **SOL**, **ETH**, or **wBTC** with leverage. Whether you're looking to go **long** (betting the price will rise) or **short** (betting the price will fall), Jupiter Perps offers a fast, exciting, and feature-packed trading experience. The platform is designed as a trader-to-LP exchange, meaning liquidity providers (LPs) supply assets to a pool, and traders borrow from that pool to open leveraged positions.
 
-- **Overview of the Jupiter Liquidity Provider (JLP) Pool**
+## Overview of the Jupiter Liquidity Provider (JLP) Pool
 The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for Jupiter Perps. It acts as the direct counterparty to all trades on the exchange. The pool holds a basket of assets (**SOL**, **ETH**, **wBTC**, **USDC**, and **USDT**) and provides the necessary liquidity for traders to open highly-leveraged positions. In return for providing liquidity, LPs earn a share of the trading fees generated on the platform.
 
 - **Key Features for Traders**
@@ -23,9 +23,9 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
 
 ---
 
-## II. Trading on Jupiter Perps
+# II. Trading on Jupiter Perps
 
-### Perps Quickstart: Opening a Position
+## Perps Quickstart: Opening a Position
 
 1.  **Connect Your Wallet**  
     Navigate to the Jupiter Perps page and click "Connect Wallet" to connect your preferred Solana wallet, like Phantom or Solflare.
@@ -57,7 +57,7 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
 10. **Closing Your Position**  
     When ready, go to the Positions Tab, select the position you wish to exit, and choose to close it partially or fully. Confirm the closure in your wallet.
 
-### Understanding Leverage
+## Understanding Leverage
 
 - **What is Leverage?**  
   Leverage allows you to trade larger positions than your initial capital would normally allow by borrowing funds from the JLP pool. It amplifies the potential for both profits and losses.
@@ -80,7 +80,7 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
   - **Use stop-loss orders:** Set stop-loss orders to automatically close your position at a predetermined price to limit potential losses.
   - **Monitor your position:** Keep a close watch on your PnL and collateral level to avoid unexpected liquidation.
 
-### Collateral Management
+## Collateral Management
 
 - **General Principles of Collateral**  
   Traders can deposit any SPL token supported by Jupiter Swap as initial margin. The platform automatically converts it to the required collateral token for the position. The USD value of the collateral is fixed at the time of deposit and does not fluctuate with the collateral token's price. Traders can deposit additional collateral to decrease leverage and the risk of liquidation, or withdraw collateral, which increases leverage and risk.
@@ -101,7 +101,7 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
   - **Withdrawing Collateral:** Decreases the liquidation price and increases leverage.
   - **Payouts:** Profits and collateral withdrawals are paid out in the stablecoin used for collateral (e.g., USDC), though traders have the option to receive the underlying token (e.g., SOL).
 
-### Fees on Jupiter Perps
+## Fees on Jupiter Perps
 
 - **Base Fees (Open/Close)**  
   A flat fee of **0.06%** of the position size is charged for both opening and closing a position, including partial closes.
@@ -119,7 +119,7 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
 - **Transaction and Priority Fees**  
   Traders must pay standard Solana network transaction fees. Priority fees or Jito bundle tips may also be paid depending on user settings to facilitate faster execution. A small amount of SOL is also used for rent to create a temporary escrow account, which is returned when the position is closed.
 
-### Calculating Profit & Loss (PnL)
+## Calculating Profit & Loss (PnL)
 
 - **What is PnL?**  
   **PnL** stands for **Profit and Loss**. It is a real-time metric that shows how much money you have gained or lost on an open position.
@@ -141,7 +141,7 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
   **Realized PnL** is calculated after a position is closed, by subtracting all fees (open/close base fee, price impact fee, borrow fees) from the unrealized PnL.
   `realizedPnl = unrealizedPnl - totalFees`
 
-### Liquidation Explained
+## Liquidation Explained
 
 - **Understanding Liquidation Price**  
   The liquidation price is the price at which a leveraged position is automatically closed by the system because the trader's collateral is no longer sufficient to cover potential losses.
@@ -164,7 +164,7 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
 - **Factors Affecting Liquidation Price**  
   The liquidation price is not static. It changes over time, primarily due to the continuous accumulation of **borrow fees**, which are deducted from your collateral. This is especially noticeable for positions with high leverage or those held for long durations.
 
-### Price Oracles and Data
+## Price Oracles and Data
 
 - **How Token Prices are Determined**  
   Token prices on Jupiter Perps for **SOL, ETH, wBTC, USDC,** and **USDT** are determined by on-chain price oracles. These oracle prices are used as the mark price for all critical functions, including opening/closing positions, calculating PnL, determining liquidation prices, and triggering limit orders. Traders should use the Jupiter Perps price chart as the single source of truth for their decisions.
@@ -187,7 +187,7 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
   - **USDC:** `6Jp2xZUTWdDD2ZyUPRzeMdc6AFQ5K3pFgZxk2EijfjnM`
   - **USDT:** `Fgc93D641F8N2d1xLjQ4jmShuD3GE3BsCXA56KBQbF5u`
 
-### Order Fulfillment Model
+## Order Fulfillment Model
 
 - **How Jupiter Creates Trade Requests**  
   When a trader initiates an action (e.g., opening a position, depositing collateral), the Jupiter frontend or API server submits a transaction to the Solana blockchain. This transaction creates a trade request containing all the necessary data to fulfill it, such as trade size, collateral, and position side.
@@ -195,7 +195,7 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
 - **How Keepers Execute Trade Requests**  
   **Keepers** are off-chain services that continuously monitor the Solana blockchain for new trade requests. When a keeper detects a request, it verifies the details and submits a second transaction to execute the trade. The trade is officially completed only after this second transaction is confirmed on the blockchain. This two-transaction model ensures that every trade request is processed efficiently and automatically.
 
-### Using Limit Orders
+## Using Limit Orders
 
 - **How Limit Orders Function**  
   A limit order allows you to set a specific price at which you want to open a position, rather than opening it at the current market price. The order remains active until it is triggered at your specified price or manually canceled. If triggered, it will either open a new position or be combined with an existing position in the same market.
@@ -212,7 +212,7 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
 - **Limitations on Limit Orders**  
   New limit orders cannot be created for a market if its pool utilization is above 80%.
 
-### Example of a Perp Trade
+## Example of a Perp Trade
 
 - **Scenario Setup**  
   A trader opens a 2x long position on SOL.
@@ -241,9 +241,9 @@ The **Jupiter Liquidity Provider (JLP) Pool** is the core liquidity engine for J
 
 ---
 
-## III. Understanding Jupiter Liquidity Provider (JLP)
+# III. Understanding Jupiter Liquidity Provider (JLP)
 
-### What is JLP? (Detailed)
+## What is JLP? (Detailed)
 
 The **Jupiter Liquidity Provider (JLP)** Pool is a multi-asset liquidity pool that serves as the counterparty for traders on Jupiter Perps. When traders borrow assets to open leveraged positions, they are borrowing directly from this pool. The JLP token represents a share in the pool.
 
@@ -253,7 +253,7 @@ The **Jupiter Liquidity Provider (JLP)** Pool is a multi-asset liquidity pool th
   - The collective **profit and loss** of traders on the platform. When traders profit, the pool's value decreases; when they lose, the pool's value increases.
   - **75%** of all fees generated from opening/closing positions, price impact, borrowing, and token swaps within the pool.
 
-### JLP Economics
+## JLP Economics
 
 - **The JLP Token**  
   The JLP token is minted to users who provide liquidity to the JLP pool. It can be acquired either by swapping for it on Jupiter Swap or by minting it directly via the Earn page.
@@ -305,7 +305,7 @@ The **Jupiter Liquidity Provider (JLP)** Pool is a multi-asset liquidity pool th
   - **Market Movements:** JLP holders are exposed to the price fluctuations of the underlying assets in the pool, especially **SOL, ETH,** and **BTC**. If these assets fall in price, the value of JLP will likely decrease.
   - **Trader PnL:** JLP acts as the counterparty to traders. When traders lose money, the JLP pool profits. When traders are profitable, the JLP pool pays out those profits. JLP tends to outperform its underlying assets in sideways or bearish markets but may underperform in strong bull markets when long positions are highly profitable.
 
-### Becoming a JLP Liquidity Provider
+## Becoming a JLP Liquidity Provider
 
 - **Method 1: Jupiter Swap**  
   1.  Go to the [USDC-JLP](https://jup.ag/swap/USDC-JLP) pair on Jupiter Swap.
@@ -321,7 +321,7 @@ The **Jupiter Liquidity Provider (JLP)** Pool is a multi-asset liquidity pool th
   4.  Review the estimated JLP quantity and fees.
   5.  Confirm the transaction in your wallet.
 
-### Risks Associated with JLP
+## Risks Associated with JLP
 
 - **Market Volatility**  
   The value of JLP is directly tied to the prices of its underlying assets (SOL, ETH, BTC, etc.). A significant downturn in the crypto market will negatively impact the JLP price.
@@ -340,9 +340,9 @@ The **Jupiter Liquidity Provider (JLP)** Pool is a multi-asset liquidity pool th
 
 ---
 
-## IV. Frequently Asked Questions (FAQ)
+# IV. Frequently Asked Questions (FAQ)
 
-### General Trading Queries
+## General Trading Queries
 
 - **How many positions can be opened on Jupiter Perps at one time?**  
   Traders can open up to 9 positions at one time: a long and short position for each of the three main assets (SOL, wETH, wBTC), with short positions allowing for collateral in either USDC or USDT.
@@ -350,7 +350,7 @@ The **Jupiter Liquidity Provider (JLP)** Pool is a multi-asset liquidity pool th
 - **What happens when you exceed leverage limits? (Auto closing)**  
   The maximum allowable leverage on the platform is **500x**. However, positions are automatically liquidated (closed) if the trader's collateral, after accounting for fees and PnL, falls below **0.2%** of the total position size.
 
-### Position & Collateral Queries
+## Position & Collateral Queries
 
 - **Why are my collateral sizes fixed (on Jupiter Perps)?**  
   When you deposit collateral, the exchange records its value in USD at that moment. This USD value remains constant for the purpose of calculating leverage and margin for your position, regardless of how the price of the collateral token itself fluctuates. For example, if you deposit $100 worth of SOL, your collateral for that position is always considered to be $100.
@@ -361,7 +361,7 @@ The **Jupiter Liquidity Provider (JLP)** Pool is a multi-asset liquidity pool th
 - **I have an existing SOL-Long position. I added 1 SOL to open a new SOL-Long position but I don’t see my new position. Why?**  
   You can only have one position per market and side (e.g., one SOL-Long position). When you open a new position for a market where you already have one, the two are combined. The size and leverage are recalculated based on the merged position. Your previously set Take Profit/Stop Loss orders will remain unchanged.
 
-### Funds & Transaction Queries
+## Funds & Transaction Queries
 
 - **I tried opening a position/adding collateral and it was not successful. Where are my funds?**  
   If a transaction to open a position or add collateral fails, your funds are typically returned to your wallet within 1-2 minutes. During network congestion, this may take longer. You can check for expired orders in the `Expired Orders` tab. To track the funds, find the transaction on a block explorer and look at the `Token Balance Change` or `SOL Balance Change` tab for the return transaction.
@@ -372,7 +372,7 @@ The **Jupiter Liquidity Provider (JLP)** Pool is a multi-asset liquidity pool th
 - **I deposited 1 SOL for a leveraged position and profited, but why did I get less than the full amount?**  
   Your final profit is the gross profit minus all associated fees. The amount you receive when you close a profitable position has already had the **opening fee**, **closing fee**, and any accrued **hourly borrow fees** deducted. These fees reduce the gross PnL, resulting in a lower net payout.
 
-### Price & Liquidation Queries
+## Price & Liquidation Queries
 
 - **How are the underlying token prices on Jupiter Perps determined?**  
   Token prices are determined by an on-chain multi-oracle system that aggregates data from **Edge by Chaos Labs**, **Chainlink**, and **Pyth**. These oracle prices are used as the definitive mark price for all platform functions, including opening/closing trades, PnL calculation, and liquidations. Traders should rely on the Jupiter Perps price chart as the source of truth.

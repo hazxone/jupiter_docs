@@ -27,7 +27,7 @@ Trading tokens on Jupiter is designed to be simple and efficient. The platform p
 
 Jupiter offers two primary modes for executing swaps:
 
-*   **Ultra Mode:** This mode is designed to "just work." It abstracts away all technical configurations by using Real-Time Slippage Estimation (RTSE) and dynamic priority fees for optimized transaction landing. It is the recommended mode for most users. A 0.1% swap fee is applied on volatile pairs, though swaps between SOL/Stables, JUP/Stables/SOL, JLP/Stables/SOL, and jupSOL/Stables/SOL are free.
+*   **Ultra Mode:** This mode is designed to "just work." It abstracts away all technical configurations by using Real-Time Slippage Estimation (RTSE) and dynamic priority fees for optimized transaction landing. It is the recommended mode for most users. A 0.1% swap fee is applied on volatile pairs, 0.02% for swaps between JUP/Stables/SOL, JLP/Stables/SOL, and jupSOL/Stables/SOL, depending on the network congestion. In some cases it could be 0% fee (free).
 *   **Manual Mode:** For users who desire granular control, this mode allows you to pick your own settings for slippage, fees, and more. It charges 0% fee to Jupiter.
 
 ### Understanding Swap Details (Price Impact, Route, Network Fee)
