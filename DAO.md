@@ -1,146 +1,329 @@
-# Jupiter DAO User Guide & Explainer
+# DAO
+## 1. Jupiter DAO Grants
 
-## 1. Understanding the Jupiter DAO
+### 1.1. What are Jupiter Dao Grants?
 
-### 1.1 What is the Jupiter DAO?
-The Jupiter DAO is a community-run system of governance that aims to actively advance both Jupiter and the Solana ecosystem as a whole. The DAO utilizes the **$JUP** governance token to conduct regular votes. In its initial year, the DAO will serve as the primary talent pool for working groups, fund their budgets, distribute grants, and more. Over time, the DAO's scope and responsibilities are expected to expand as it becomes more decentralized.
+Jupiter DAO grants are for those who have begun working on something in the DAO, which they feel ready to take to the next level and pursue a workgroup. We are looking for hard workers who embrace execution & iteration over perfection.
 
-### 1.2 Vision, Ethos, and Progress of the JUP DAO
-The foundational vision for the JUP DAO is outlined in an essay by Meow, with its major ethos points described in a separate document reviewing the "JUP Cat PPP." The Core Working Group (CWG) also releases quarterly reports that detail the DAO's vision, progress, and the CWG's scope in relation to it.
+More details here: [https://www.jupresear.ch/t/jupiter-dao-grants/22681.](https://www.jupresear.ch/t/jupiter-dao-grants/22681)
 
-### 1.3 What is the J.U.P. (Jupiter's Community Vision)?
-The **J.U.P.** is Jupiter's vision for a dynamic, multi-faceted, and synergistic community that works together to move both Jupiter and the broader crypto space forward. It is comprised of several key groups: users, the team, the DAO, Catdets, and Working Groups. Together, these components form the J.U.P.
+---
 
-## 2. Staking $JUP and Active Staking Rewards (ASR)
+### 1.2. How to get a Jupiter DAO Grant?
 
-### 2.1 Staking Your $JUP
-To participate in governance and earn rewards, you can stake your **$JUP** tokens. Staking involves locking your tokens in a smart contract through the official governance platform.
+1. Start Working and Find Allies - Find what the Jupiverse needs and spearhead it in a direction. For inspiration, consult resources like the [C.A.R.E Essay](https://x.com/SlorgoftheSlugs/status/1836925337881493513), or the [Jup & Juice Case Study](https://www.jupresear.ch/t/jup-juice-casestudy/), and remember — perfect is the enemy of the good. Lo-fi & experimentation will trump high quality but hesitancy every time.
+2. Work with the DAO to Grow Together - The DAO is here to support you through various resources: Mentorship sessions with the CWG, CWG Office Hours (Mondays at 16:00 UTC), Jup & Juice participation, Consulting other workgroups, Community feedback/engagement.
+3. Once you feel ready to scale things up, apply for a grant on the platform <https://earn.superteam.fun/grants/jupiter-dao-grants/.>You'll hear back within ~7 days if there's interest. Accepted applicants should track their progress for the retrospective.
 
-#### 2.1.1 How to Stake $JUP
-1.  **Step 1.** Visit the governance platform at `https://vote.jup.ag/` and connect your wallet by clicking the "Connect" button in the top right corner. This can be done on a desktop or through a Dapp browser in your mobile wallet.
-2.  **Step 2.** Enter the amount of **$JUP** you wish to lock and click the "Stake" button. Confirm the transaction in your wallet.
-3.  **Step 3.** Once the transaction is confirmed, the **$JUP** tokens will leave your wallet, and your Voting Power will be updated on the governance site. You are now ready to vote on proposals.
+---
 
-### 2.2 Unstaking Your $JUP
-You can reclaim your staked **$JUP** at any time by initiating a 30-day unstaking process.
+### 1.3. How else can I be involved in the DAO?
 
-#### 2.2.1 How to Unstake $JUP
-1.  **Step 1.** Connect your staking wallet to the governance platform at `https://vote.jup.ag/`.
-2.  **Step 2.** Select the "Unstake" tab below your Voting Power. Choose the amount of tokens you want to unstake (either the full amount or a custom amount). Click the "Unstake" button and confirm the transaction.
-3.  **Step 3.** Your Voting Power will update, and a countdown will appear showing the time remaining until the tokens are fully unlocked. You can cancel this process at any time by selecting the "Cancel" button.
-4.  **Step 4.** After the 30-day unstaking period ends, select the "Claim" button and confirm the transaction to withdraw the tokens back to your wallet.
+In addition to voting and applying for a grant or joining an existing workgroup, there are multiple ways to participate in the Jupiter DAO. These include:
 
-During the 30-day unstaking period, you can still vote on live proposals with your available voting power and qualify for rewards. If you unstake all your locked **$JUP**, your Voting Power will decrease linearly over the 30 days. If you unstake only a portion, your Voting Power is reduced instantly.
+1. Attending the CWG Office hours in Discord every Monday at 5 PM UTC
 
-#### 2.2.2 Troubleshooting Unstaking Issues
+2. Read the Weekly Newsletters posted from the [DAO Account](https://x.com/Jup_Dao)
 
-##### 2.2.2.1 Why did my unstaked JUP transaction fail?
-If your transaction to claim your **$JUP** fails after the 30-day unstaking period, it is likely because your wallet does not have an open token account for **$JUP**. This can happen if you have used a wallet clean-up service that burns empty token accounts. To fix this, simply buy a tiny amount of **$JUP** to reopen the token account, and you will then be able to claim your unstaked tokens.
+3. Attend the Regular Planetary calls for ecosystem updates
 
-### 2.3 Understanding Active Staking Rewards (ASR)
+4. Post or comment on [Jupresearch](https://www.jupresear.ch/) in any relevant ongoing topics
 
-#### 2.3.1 What is ASR?
-**ASR** stands for **Active Staking Rewards**. It is the Jupiter DAO's staking rewards program designed to reward active community members who both stake their **$JUP** and participate in voting.
+5. Post or comment on the [Jupiter subreddit](https://www.reddit.com/r/jupiterexchange/)
 
-#### 2.3.2 How ASR is Calculated
-ASR is distributed as a linear airdrop based on "Participated Voting Power." This is calculated using two factors:
-*   The amount of **$JUP** you have staked when you vote.
-*   The number of proposals you participate in.
+6. Help guide people in the langauge channels, or link up with a regional initiative
 
-The more **$JUP** you have staked and the more proposals you vote on, the higher your rewards will be. The specific option you choose when voting (e.g., "Yes" or "No") has no impact on your share of the rewards; participation is what counts.
+7. Participate in the [Twitter community group](https://x.com/i/communities/1839554213443236069)
 
-#### 2.3.3 Receiving Your ASR Rewards
-ASR rewards are distributed quarterly and must be actively claimed. To claim, connect your voting wallet to `https://vote.jup.ag/asr` when the claim period is live. You will see your eligible rewards and a button to claim them.
+8. Earn a Cat of Culture or Catdet Role
 
-Note that ASR rewards cannot be claimed while you are in the process of unstaking. You must either wait for the unstaking period to finish before claiming or cancel the unstaking process to claim your ASR.
+9. Post any DAO feedback under the Jup Ideas post at <https://www.jupresear.ch/t/jupiter-dao-ideas/36219/> (either publicly or confidentially)
 
-## 3. Voting in the Jupiter DAO
+10. Make content with the [Midjourney Archive](https://drive.google.com/drive/folders/15814AhAw8ICWhUkeex0T5et20XVyebx6) or the [Jup Branding Kit](https://www.jup.eco/brand)
 
-### 3.1 How to Vote on Proposals
-1.  **Step 1.** Stay informed about upcoming votes by joining community discussions. When a proposal is live, connect your staking wallet to `https://vote.jup.ag/` and scroll down to the "Proposals" section.
-2.  **Step 2.** Select the active vote from the list. This will open the proposal page with more details and the voting options.
-3.  **Step 3.** Choose your preferred vote option, click the "Vote" button, and confirm the transaction with your wallet.
-4.  **Step 4.** The page will update to confirm your vote, displaying the voting power you used.
+11. Attend a [Jup & Juice podcast](https://x.com/JUPANDJUICE) episode
 
-You can change your vote at any time while the proposal is still active by simply voting again with a different option.
+12. Attend the PPP Hour event on Discord
 
-### 3.2 Never Miss a Vote: Staying Informed
-There are several ways to stay informed about voting periods:
-*   Keep an eye on the **Discord Announcements channel**. Votes and their lead-up typically last 7-10 days, with the voting window itself lasting 3-4 days.
-*   Follow the **DAO Twitter account** (`@jup_dao`), which posts vote calendars and reminders.
-*   Opt into email reminders on the vote page by selecting "Notify me" to receive an email when a vote is active.
+---
 
-### 3.3 Troubleshooting Voting Issues
+### 1.4. What other opportunities are there for the community?
 
-#### 3.3.1 My $JUP is Staked but I Can't Vote: Common Reasons
-Voting on the Jupiter DAO is an on-chain transaction that requires gas fees. Ensure you have a minimum of **0.01 SOL** in your wallet to cover these fees when you attempt to vote.
+The DAO, Jupiter team, and Working Groups, occasionally have bounties and competitions for the community. These could involve but are not limited to: making content, creating artwork, video reviews, guides, threads or giving feedback. Such opportunities are communicated on X or Discord's WG-announcements channel.
 
-#### 3.3.2 Voting Power Reduced During Unstaking: Why it Happens
-When you vote while in the process of unstaking, your applied Voting Power is based on the amount your staking account will have left at the end of the proposal's voting period. This is an intentional design to prevent a user from voting, unstaking, transferring the tokens to another wallet, and voting again on the same proposal, which would essentially allow the same tokens to be used for voting twice.
 
-## 4. Jupiter DAO Grants
+---
 
-### 4.1 What are Jupiter DAO Grants?
-Jupiter DAO grants are intended for community members who have already started working on a DAO-related initiative and feel ready to scale it up, with the ultimate goal of forming a workgroup. The DAO seeks hard workers who prioritize execution and iteration over perfection.
+## 2. Working Groups
 
-### 4.2 How to Apply for a Jupiter DAO Grant
-1.  **Start Working and Find Allies:** Identify a need within the Jupiverse and begin working to address it. Experimentation and lo-fi approaches are valued over high-quality but hesitant efforts.
-2.  **Work with the DAO to Grow:** Utilize DAO resources for support, including mentorship sessions with the Core Working Group (CWG), attending CWG Office Hours (Mondays at 16:00 UTC), and engaging with the community for feedback.
-3.  **Apply for a Grant:** Once you are ready to scale up, apply for a grant on the platform at `https://earn.superteam.fun/grants/jupiter-dao-grants/`. Applicants can expect to hear back within approximately 7 days if there is interest.
+### 2.1. I want to form a Working Group but I don’t know where to start?
 
-## 5. Jupiter DAO Working Groups
+There are several ways to get involved in the Jupiter DAO. Some good ways to just get started are:
 
-### 5.1 What are Working Groups?
-Working Groups (WGs) are small task forces composed of independent operators led by key ecosystem members. Their purpose is to guide critical work in areas such as growing the Jupiter community, enhancing the Solana ecosystem, and establishing processes for the DAO itself.
+1. Be helpful and work your way up to the Catdet role: Lot’s of catdets are doing things and have the best eyes and ears on the Jupiverse.
+2. Volunteer or assist with ongoing initiatives, whether that be an existing working groups or general tasks like helping with the reddit.
+3. Be on the lookout for any ongoing bounties
+4. Create some form of content: videos, threads, etc, and then propagate it.
+5. You can find some general ideas on what might be useful to the DAO in this essay [here](https://x.com/SlorgoftheSlugs/status/1836925337881493513).
+6. Or just consume information and engage on the reddit, Jupresearch forum or Discord, and an idea may come to you over time.
 
-### 5.2 Current Working Groups
-As of now, there are 6 Working Groups:
-*   **Core Working Group (CWG):** Jupiter DAO (`@jup_dao`)
-*   **Uplink Working Group:** Jupiter Uplink (`@jup_uplink`)
-*   **Catdets Working Group (CAWG):** (`@JUPCatdets`)
-*   **JUP & JUICE Working Group (trial):** Jup and Juice (`@JUPANDJUICE`)
-*   **Design & Art Working Group (DAWG) (trial):** (`@jupdesignlabs`)
-*   **DevRel Working Group (DRWG) (trial):** (`@JupDevRel`)
+---
 
-### 5.3 Participating in Working Groups
+### 2.2. How can I join a Working Group?
 
-#### 5.3.1 How to Join an Existing Working Group
-You can contact any existing Working Group through their social media channels to discuss how you could contribute. A great way to get involved organically is to support and network with new contributors in their early stages, which may lead to becoming part of a future WG.
+You can always contact any existing WG via their socials to discuss how you could bring value.
 
-#### 5.3.2 How to Form a New Working Group (and Where to Start)
-Forming a Working Group is a multi-step process that begins with contributing to the DAO, followed by receiving a grant, becoming a trial WG, and finally graduating to a full-fledged WG.
+However, since Working Groups go through multiple stages before their vote, supporting and networking with new contributors in the early stages is a great organic way to become part of a future one, or even create your own.
 
-If you want to form a WG but don't know where to start, consider these steps:
-*   Be helpful and active in the community, potentially working your way up to a **Catdet** role.
-*   Volunteer or assist with ongoing initiatives from existing WGs or general community tasks.
-*   Look out for and participate in any ongoing bounties.
-*   Create and share content such as videos or threads.
-*   Engage with discussions on Reddit, the Jupresearch forum, or Discord to develop ideas over time.
+---
 
-## 6. General Community Involvement & Resources
+### 2.3. How can I form a Working Group?
 
-### 6.1 Other Ways to Get Involved in the DAO
-Beyond voting, grants, and working groups, you can participate in the Jupiter DAO in numerous ways:
-*   Attend CWG Office hours in Discord every Monday at 5 PM UTC.
-*   Read the Weekly Newsletters from the DAO Account (`@Jup_Dao`).
-*   Attend Regular Planetary calls for ecosystem updates.
-*   Post or comment on `Jupresearch` forum topics.
-*   Participate in the Jupiter subreddit or the Twitter community group.
-*   Help new users in language-specific channels or join a regional initiative.
-*   Earn a Cat of Culture or Catdet Role.
-*   Provide DAO feedback on the Jup Ideas post.
-*   Create content using the Midjourney Archive or the Jup Branding Kit.
-*   Attend a Jup & Juice podcast episode or the PPP Hour event on Discord.
+Forming a Working Group is a multi-step system that starts with doing work for the DAO, then receiving a grant, becoming a trial, and finally becoming a full fledged WG.
 
-### 6.2 Understanding Community Roles
+You can read more about that process here: [https://www.jupresear.ch/t/jupiter-dao-microgrants-initiative/21583.](https://www.jupresear.ch/t/jupiter-dao-microgrants-initiative/21583)
 
-#### 6.2.1 What are Catdets?
-**Catdets** are among Jupiter's most active community members, known for consistently contributing and uplifting others in the **J.U.P.** They are identifiable by their blue-colored role in Discord, but the role recognizes contributions across all platforms, including Reddit, Twitter, the Jupresearch Forum, and even in-person events. To become a **Catdet**, be active, help new users, and embody the Catdet Ethos. Over time, community members may recommend you for the role.
+---
 
-### 6.3 DAO Resources & Tools
+### 2.4. What is a Working Group?
 
-#### 6.3.1 DAO Branding Kit and Creative Resources
-You can find the full branding kit, including Jupiter and DAO logos, fonts, and colors, at `https://www.jup.eco/#brand`. An evolving guide on Midjourney and other AI tools is available at `https://www.jup.eco/#ai`. A large selection of images generated with the DAO’s Midjourney prompt is also available for community use.
+They are small task forces of independent operators led by key ecosystem members, which guide critical work in areas like growing the Jupiter community, enhancing the Solana ecosystem, and creating processes for the DAO.
 
-#### 6.3.2 Other Community Opportunities (Bounties, Competitions, etc.)
-The DAO, the Jupiter team, and the various Working Groups occasionally offer bounties and competitions for the community. These opportunities can include creating content, artwork, video reviews, guides, or providing feedback. Announcements for these opportunities are typically made on X (formerly Twitter) or in the `WG-announcements` channel on Discord.
+---
+
+### 2.5. What are the current Working Groups?
+
+Currently there are 6 Workgroups, which include:
+
+Core Working Group - CWG: Jupiter DAO <https://x.com/jup_dao>
+
+<https://www.jupresear.ch/t/proposal-core-working-group-budget/12689>
+
+Uplink Working Group - Jupiter Uplink <https://x.com/jup_uplink>
+
+<https://www.jupresear.ch/t/proposal-uplink-working-group-budget-final/18103>
+
+Catdets Working Group - CAWG <https://x.com/JUPCatdets>
+
+<https://www.jupresear.ch/t/proposal-catdet-workgroup-lfgrow/15665>
+
+JUP & JUICE Working Group - Jup and Juice <https://x.com/JUPANDJUICE>
+
+<https://www.jupresear.ch/t/jup-juice-work-group-jjwg-trial-proposal/22159>
+
+Design & Art Working Group - DAWG (trial): <https://x.com/jupdesignlabs>
+
+<https://www.jupresear.ch/t/trial-proposal-design-art-working-group-dawg/36665>
+
+DevRel Working Group - DRWG (trial): <https://x.com/JupDevRel>
+
+<https://www.jupresear.ch/t/trial-proposal-devrel-working-group-drwg/36663/1>
+
+
+---
+
+## 3. Staking, Voting, and Active Staking Rewards (ASR)
+
+### 3.1. I unstaked my $JUP 30 days ago, but when I try to claim it, the transaction fails. Why?
+
+Reclaiming your $JUP requires an open token account for $JUP in your wallet.
+
+If you’ve used a wallet clean-up service to burn any empty token accounts, you can easily reopen it by buying a tiny amount of $JUP, and then you will be able to claim.
+
+---
+
+### 3.2. My $JUP is staked but I can't vote. Why?
+
+Voting is an on chain transaction that requires gas fees. Do make sure you have a minimum of 0.01 Sol in your wallet when trying to vote.
+
+---
+
+### 3.3. I voted while I was unstaking and it says I voted with less voting power than I have. Why?
+
+When voting while unstaking, your applied Voting Power is based on the voting power your staking account would have left at the end of the proposal.
+
+This is by design, so someone with 2 days of unstaking left cannot vote, claim the unstaked tokens, transfer them, and vote again with a different wallet while the proposal is still active, essentially using the same tokens to vote twice.
+
+---
+
+### 3.4. How do I never miss a vote?
+
+There are a few ways to stay informed. One is to always keep an eye on the Discord Announcements channel. Most votes and the leadup to them last at least 7-10, and votes themselves last 3-4 days. Often they are mentioned during the live events such as the weekly planetary call.
+
+However, you can also keep watch on the [DAO Twitter](https://x.com/jup_dao) which not only posts vote calendars, but also reminders during a vote.
+
+You have yet a 3rd option which is to opt into email reminders on the vote page, and select "Notify me" to be sent an email during a vote.
+
+![DAO Page showing the location of 'Notify me' button](https://support.jup.ag/hc/article_attachments/20008320275996)
+
+---
+
+### 3.5. How will I receive my ASR rewards?
+
+ASR rewards are distributed quarterly, and they have to be claimed. Connect your voting wallet to <https://vote.jup.ag/asr> when ASR claims go live and you'll see the eligible rewards as well as a button to claim them.
+
+![ASR Page showing the location of 'Claim' button](https://support.jup.ag/hc/article_attachments/20235219986716)
+
+Note that ASR rewards cannot be claimed while unstaking. You can either choose to wait for the Unstaking period to end, and then claim your ASR, or cancel the current Unstaking process, and claim your ASR.
+
+---
+
+### 3.6. How is ASR calculated?
+
+This airdrop is done linearly, based on Participated Voting Power, which is calculated by Amount of Staked JUP when voting, and Number of Proposals Participated in.
+
+The option you chose when voting has no impact on your rewards share.
+
+The more $JUP staked while voting → the higher the rewards
+
+The more proposals participated in → the higher the rewards
+
+More on the ASR methodology here: [https://www.jupresear.ch/t/asr-active-staking-rewards-methodology/19338.](https://www.jupresear.ch/t/asr-active-staking-rewards-methodology/19338)
+
+---
+
+### 3.7. What is ASR?
+
+ASR stands for Active Staking Rewards, and it's the Jupiter Dao staking rewards program,  rewarding Active members of the community who stake AND vote.   
+Read more about ASR here: <https://www.jupresear.ch/t/asr-active-staking-rewards-notes/12032>
+
+---
+
+### 3.8. How do I vote?
+
+Join the community discussions on Discord, Twitter, and the Research Forum, to educate yourself about any upcoming votes.
+
+When a proposal is live, connect your wallet to the governance platform on <https://vote.jup.ag/> and scroll to the ‘Proposals’ section at the bottom. You'll see a list of all past proposals, with any active ones at the top. Selecting the proposal you wish to vote on will open a new page, with more details and the vote options.
+
+Once you have made a decision, select the vote option you want to use, and click vote. Your vote will be registered, and you should now see a confirmation of what you voted for, and the voting power that you used.
+
+Note that:
+
+* You can always change your mind while the proposal is still active, and change your vote by simply voting again, differently**.**
+* The vote option that you choose has no impact on your rewards share - you just have to vote.
+
+See the guide below for step by step instructions:
+
+**Step 1.** Connect your staking wallet to <https://vote.jup.ag/> and scroll down to the Proposals section.
+
+![Screenshot showing the location of the 'Proposals' section](https://support.jup.ag/hc/article_attachments/20235097825692)
+
+**Step 2.** Select the live vote from the list (the status will be Active). This will open that proposal page and vote options.
+
+![Screenshot showing the location of the proposals that are active and not voted yet](https://support.jup.ag/hc/article_attachments/20235066152220)
+
+**Step 3.** Once you have made a decision, select your preferred vote option, click the Vote button, and confirm the transaction with your wallet.
+
+![Screenshot to cast your vote for DAO proposal](https://support.jup.ag/hc/article_attachments/20235097830684)
+
+**Step 4.** You will see the proposal page update, displaying what you voted for and the voting power you used, with an option to leave verified feedback.
+
+![Screenshot after casting your vote for DAO proposal](https://support.jup.ag/hc/article_attachments/20235066152988)
+
+---
+
+### 3.9. How do I Unstake my $JUP?
+
+To Unstake your $JUP tokens, connect your wallet to the governance platform, and select the Unstake tab, located below your Voting Power. You can choose to unstake the full locked amount, or just a part of it, and start the 30 days unstaking process by selecting the Unstake button.
+
+If you unstake all the locked $JUP, your Voting Power will decrease linearly for 30 days. If you have chosen to unstake only a part of your locked $JUP, your Voting Power is reduced instantly.
+
+During this 30 days unstaking period, you can still vote on any live proposals with your available voting power, and qualify for rewards.
+
+At the end of the 30 days unstaking period, your $JUP tokens will be unlocked, and you will have an option to claim them back to your wallet.   
+  
+See the guide below for step by step instructions:   
+  
+**Step 1.** Connect your staking wallet to the governance platform at <https://vote.jup.ag/>.
+
+![DAO Screenshot page showing the location of 'Connect Wallet' button](https://support.jup.ag/hc/article_attachments/20232608405788)
+
+**Step 2.** Select the Unstake tab, and choose the amount of tokens you want to unstake (select MAX to unstake everything or input a custom amount). Click the Unstake button, and confirm the transaction with your wallet. ![DAO Screenshot page showing the location of 'Unstake' button](https://support.jup.ag/hc/article_attachments/20232608410140)
+
+**Step 3.** You will see your Voting power update once the transaction is confirmed, and a countdown, displaying the amount of time left until the tokens fully unlock and can be claimed. You can also cancel this process at any time by selecting the Cancel button.
+
+![Screenshot showing your voting power and countdown](https://support.jup.ag/hc/article_attachments/20232622502684)
+
+**Step 4.** Once the tokens fully unlock, select the Claim button and confirm the transaction. This will withdraw the tokens from the governance program to your wallet.
+
+![Screenshot showing the location of the 'Claim' button](https://support.jup.ag/hc/article_attachments/20233888682652)
+
+---
+
+### 3.10. How do I Stake my $JUP?
+
+To stake your $JUP tokens, connect your wallet to the governance platform on <https://vote.jup.ag/>, enter the amount of $JUP you wish to lock, and click ‘Stake’. The $JUP will leave your wallet and be deposited into a smart contract, but can be reclaimed at any time by undergoing a 30 day unstaking process.
+
+See the guide below with step by step instructions:
+
+**Step 1.** Visit the governance platform at <https://vote.jup.ag/>. You can do this via desktop, or your favourite wallet's Dapp browser on mobile. Click/tap the Connect button in the top right corner, and select the wallet you want to log in with.
+
+![DAO screenshot showing the location of the Connect Wallet button](https://support.jup.ag/hc/article_attachments/20231576395676)
+
+**Step 2.** Enter the amount of $JUP tokens you want to lock. Click/tap the ‘Stake’ button, and confirm the transaction.
+
+![DAO ASR screenshot showing your voting power, input amount how much to stake and Stake button](https://support.jup.ag/hc/article_attachments/20231607694364)
+
+**Step 3.** The $JUP tokens will leave your wallet, and you will see your Voting Power update on the governance site. You are now ready to vote on any live proposal!
+
+![Screenshot of toast notification pop up after you sucessfully stake your token](https://support.jup.ag/hc/article_attachments/20231607701276)
+
+
+---
+
+## 4. The Community, J.U.P. and the DAO
+
+### 4.1. What is the J.U.P.?
+
+The J.U.P is Jupiter’s vision for a dynamic, multi-faceted, and synergistic community, which works in unison to move both Jupiter and the crypto space forward. It is composed of users, the team, the DAO, Catdets and Working Groups.
+
+All of these groups together form the J.U.P, and you can read more about this concept here: [JUP an experiment in distributed strategic execution.](https://www.jupresear.ch/t/j-u-p-an-experiment-in-distributed-strategic-execution/7182%C2%A0)
+
+![JUP - Jupiter United Planet and its components : Users, Team, DAO, Catdets, Work Groups](https://support.jup.ag/hc/article_attachments/20007956605852)
+
+---
+
+### 4.2. What is the Jupiter DAO?
+
+It is a community-run system of governance, which seeks to actively push forward both Jupiter, and Solana, as a whole. The DAO conducts regular votes using the $JUP governance token. For the first year, the DAO will become the main talent pool for working groups, fund working group budgets, distribute grants, and more. Over time the DAO will further extend its scope and responsibilities as it becomes more decentralized.
+
+Read about the DAO’s funding [here.](https://www.jupresear.ch/t/first-dao-funding/12333)
+
+---
+
+### 4.3. What are JUP DAO's Vision, Ethos, and Progress so far?
+
+The foundation for the JUP DAO vision is outlined in [this essay](https://www.jupresear.ch/t/our-aspirations-for-the-jup-dao/11200) by Meow, with some of the major Ethos points being described [here](https://www.jupresear.ch/t/jup-cat-ppp-a-full-review-of-the-key-ethos-that-drives-jup/20875).
+
+Additionally, the CWG quarterly reports below outline the vision for the DAO, progress made so far, and the CWG’s scope in relation to it:
+
+CWG Quarterly Report #1: <https://www.jupresear.ch/t/cwg-quarterly-report-1/20094>
+
+CWG Quarterly Report #2: <https://www.jupresear.ch/t/cwg-quarterly-report-2/26559>
+
+CWG Quarterly Report #3: <https://www.jupresear.ch/t/cwg-quarterly-report-3/37895>
+
+---
+
+### 4.4. What are Catdets?
+
+Catdets are Jupiter's community most active members - constantly contributing, and dedicated to uplifting others in the J.U.P.
+
+You can recognize them by their blue coloured role in Discord. However, the role is not exclusively limited to Discord contributions, and you can become a catdet due to activity on Reddit, Twitter, or even the [Jupresearch Forum](https://www.jupresear.ch/) or IRL events.
+
+To become a catdet, be active in chats, try helping new users, Embrace [the Catdet Ethos](https://catdets.jup.eco/docs/who-is-a-catdet/ethos), and become a true pillar of the Jupiter community. Over time, you will be noticed, and people will recommend you for the role.
+
+To learn more about becoming a catdet, browse the official website at <https://catdets.jup.eco/>.  
+ **![Jupiter Ethos and Catdet Banner](https://support.jup.ag/hc/article_attachments/20008019828252)**
+
+---
+
+### 4.5. What is the DAO Branding Kit and where can I find it?
+
+Visit <https://www.jup.eco/#brand> for the full brading kit including Jupiter and DAO logos, Fonts, and Colours. You can also find an ever evolving guide on Midjourney and other tools at [https://www.jup.eco/#ai.](https://www.jup.eco/#ai)
+
+A large selection of images generated with the DAO’s Midjourney prompt can be found [here](https://drive.google.com/drive/folders/15814AhAw8ICWhUkeex0T5et20XVyebx6).
+
+
+---
+
